@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+  <script type="text/javascript">
+    function sprawdz()
+    {
+      let liczba = document.getElementById("wartosc").value; //uchwyt, a nie zawartość elementu
+      if(liczba > 0)
+      {
+        document.getElementById('wynik').innerHTML = "dodatnia";
+      }
+      else if (liczba < 0)
+      {
+        document.getElementById('wynik').innerHTML = "ujemna";
+      }
+      else if (liczba == "0")
+      {
+        document.getElementById('wynik').innerHTML = "zero";
+      }
+      else
+      {
+        document.getElementById('wynik').innerHTML = "to nie jest liczba";
+      }
+
+    }
+
+  </script>
+</head>
+
+<body>
+  <input type="text" id="wartosc">
+  <input type="submit" value="Sprawdź" onclick="sprawdz()">
+
+  <div id="wynik"></div>
+
+</body>
+
+</html>

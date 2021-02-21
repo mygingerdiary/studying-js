@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+  <script type="text/javascript">
+
+    function wypisz()
+    {
+      let var1 = document.getElementById("var1").value;
+      let var2 = document.getElementById("var2").value;
+      let napis = "";
+
+      if(var1<var2)
+      {
+        for (let i = var1; i <= var2; i++)
+        {
+          napis = napis + i + " ";
+        }
+        document.getElementById("wynik").innerHTML = napis;
+      }
+      else
+      {
+        document.getElementById("wynik").innerHTML = "Pierwsza liczba musi być mniejsza niż druga licza.";
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <input type="text" id="var1">
+  <input type="text" id="var2">
+  <input type="submit" value="Sprawdź" onclick="wypisz()">
+
+  <div id="wynik"></div>
+
+</body>
+
+</html>
